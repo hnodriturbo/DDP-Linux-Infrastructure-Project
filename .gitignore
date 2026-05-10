@@ -1,0 +1,141 @@
+# ========================================
+# Universal .gitignore
+# ========================================
+# Purpose:
+# - Ignore local dependencies, caches, logs, secrets, build output,
+#   IDE settings, temporary files, and machine-specific data.
+# - Keep repositories clean, portable, and safe for GitHub uploads.
+# ========================================
+
+# Node / Next.js
+node_modules/
+.next/
+dist/
+out/
+coverage/
+.vscode/
+
+website/node_modules/
+website/.next/
+website/.vscode/
+website/dist/
+website/out/
+website/coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+website/.env
+website/.env.*
+!website/.env.example
+
+# Prisma seed environment files
+prisma/seeds/env-local
+prisma/seeds/env-production
+prisma/seeds/.env
+prisma/seeds/.env.*
+
+website/prisma/seeds/env-local
+website/prisma/seeds/env-production
+website/prisma/seeds/.env
+website/prisma/seeds/.env.*
+
+# Prisma local databases
+prisma/*.db
+prisma/*.sqlite
+prisma/*.sqlite-journal
+
+website/prisma/*.db
+website/prisma/*.sqlite
+website/prisma/*.sqlite-journal
+
+# AI / Agent tooling
+.claude/
+.codex/
+.openai/
+.cursor/
+.aider/
+.roo/
+
+website/.claude/
+website/.codex/
+website/.openai/
+website/.cursor/
+website/.aider/
+website/.roo/
+
+# MCP local config/runtime
+.mcp/
+mcp.json
+.mcp.json
+
+website/.mcp/
+website/mcp.json
+website/.mcp.json
+
+# Logs / temp / cache
+logs/
+*.log
+*.log-*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+.cache/
+tmp/
+temp/
+.tmp/
+
+website/logs/
+website/.cache/
+website/tmp/
+website/temp/
+website/.tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+website/__pycache__/
+website/.venv/
+website/venv/
+
+# PM2
+.pm2/
+
+website/.pm2/
+
+# OS junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+desktop.ini
+
+# IDEs / editors
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# Tooling caches
+.eslintcache
+*.tsbuildinfo
+
+website/.eslintcache
+
+# Archives / binaries
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Static/docs build output
+docs/_build/
+documentation/_build/
