@@ -1,0 +1,18 @@
+# ================================
+# Network Configuration - CentOS Client
+# ================================
+# Purpose:
+# - ens160 = LAN (VMnet5) → static IP
+# - Gateway = Ubuntu server (router)
+# ================================
+
+TYPE=Ethernet
+BOOTPROTO=none
+NAME=ens160
+DEVICE=ens160
+ONBOOT=yes
+
+IPADDR=192.168.56.20
+PREFIX=24
+GATEWAY=192.168.56.10
+DNS1=8.8.8.8

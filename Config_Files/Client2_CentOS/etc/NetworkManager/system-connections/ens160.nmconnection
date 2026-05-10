@@ -1,0 +1,35 @@
+# ================================
+# NetworkManager Connection Profile
+# CentOS Client Network Configuration
+# ================================
+# Purpose:
+# - Configure static IPv4 networking
+# - Use Ubuntu server1 as gateway/router
+# - Enable persistent networking after reboot
+# - Define DNS and search domain settings
+# ================================
+
+[connection]
+id=client1-lan
+uuid=e5500879-0b7d-3690-ab96-d7c0c947481c
+type=ethernet
+autoconnect-priority=-999
+interface-name=ens160
+timestamp=1778177917
+
+[ethernet]
+
+[ipv4]
+address1=192.168.56.20/24
+dns=8.8.8.8;
+dns-search=ddp.is;
+gateway=192.168.56.10
+ignore-auto-dns=true
+may-fail=false
+method=manual
+
+[ipv6]
+addr-gen-mode=eui64
+method=auto
+
+[proxy]
