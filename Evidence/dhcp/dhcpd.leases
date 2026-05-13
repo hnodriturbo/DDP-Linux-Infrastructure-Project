@@ -1,0 +1,64 @@
+# ============================================================
+# DHCP Evidence - Server Lease Database
+# ============================================================
+# File: Evidence/dhcp/dhcpd.leases
+# Host: server1.ddp.is
+# Purpose:
+# - Shows active DHCP leases assigned by server1.
+# - Confirms client1 and client2 received addresses from the DHCP pool.
+# - Provides MAC address, hostname, lease time, and active binding state.
+# ============================================================
+
+hnodri@server1:~$ sudo cat /var/lib/dhcp/dhcpd.leases
+# The format of this file is documented in the dhcpd.leases(5) manual page.
+# This lease file was written by isc-dhcp-4.4.3-P1
+
+# authoring-byte-order entry is generated, DO NOT DELETE
+authoring-byte-order little-endian;
+
+server-duid "\000\001\000\0011\2278\010\000\014)\260\007\260";
+
+lease 192.168.100.100 {
+  starts 3 2026/05/13 13:24:39;
+  ends 3 2026/05/13 13:34:39;
+  cltt 3 2026/05/13 13:24:39;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:f1:83:ad;
+  uid "\001\000\014)\361\203\255";
+  client-hostname "client1";
+}
+lease 192.168.100.101 {
+  starts 3 2026/05/13 13:24:59;
+  ends 3 2026/05/13 13:34:59;
+  cltt 3 2026/05/13 13:24:59;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:77:93:07;
+  uid "\001\000\014)w\223\007";
+  client-hostname "client2";
+}
+lease 192.168.100.100 {
+  starts 3 2026/05/13 13:29:42;
+  ends 3 2026/05/13 13:39:42;
+  cltt 3 2026/05/13 13:29:42;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:f1:83:ad;
+  uid "\001\000\014)\361\203\255";
+  client-hostname "client1";
+}
+lease 192.168.100.101 {
+  starts 3 2026/05/13 13:29:58;
+  ends 3 2026/05/13 13:39:58;
+  cltt 3 2026/05/13 13:29:58;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:77:93:07;
+  uid "\001\000\014)w\223\007";
+  client-hostname "client2";
+}

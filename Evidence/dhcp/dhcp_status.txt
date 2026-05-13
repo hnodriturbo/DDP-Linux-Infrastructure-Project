@@ -1,0 +1,32 @@
+# ============================================================
+# DHCP Evidence - DHCP Service Status
+# ============================================================
+# File: Evidence/service_status/dhcp_status.txt
+# Host: server1.ddp.is
+# Purpose:
+# - Shows that the ISC DHCP server service is enabled and running.
+# - Shows DHCP server startup details and the private interface used for leases.
+# - Shows DHCPREQUEST, DHCPOFFER, and DHCPACK events for client leases.
+# ============================================================                                                                                
+
+hnodri@server1:~$ systemctl status isc-dhcp-server --no-pager
+● isc-dhcp-server.service - ISC DHCP IPv4 server
+     Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-05-13 13:24:24 GMT; 49s ago
+       Docs: man:dhcpd(8)
+   Main PID: 9069 (dhcpd)
+      Tasks: 1 (limit: 4541)
+     Memory: 3.8M (peak: 4.1M)
+        CPU: 46ms
+     CGroup: /system.slice/isc-dhcp-server.service
+             └─9069 dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf /etc/dhcp/dhcpd.conf ens33
+
+May 13 13:24:39 server1.ddp.is dhcpd[9069]: DHCPREQUEST for 192.168.100.100 (192.168.100.10) from 00:0c:29:f1:83:ad (client1) via ens33
+May 13 13:24:39 server1.ddp.is dhcpd[9069]: DHCPACK on 192.168.100.100 to 00:0c:29:f1:83:ad (client1) via ens33
+May 13 13:24:46 server1.ddp.is dhcpd[9069]: reuse_lease: lease age 7 (secs) under 25% threshold, reply with unaltered, existing lease for 192.168.100.100
+May 13 13:24:46 server1.ddp.is dhcpd[9069]: DHCPREQUEST for 192.168.100.100 from 00:0c:29:f1:83:ad (client1) via ens33
+May 13 13:24:46 server1.ddp.is dhcpd[9069]: DHCPACK on 192.168.100.100 to 00:0c:29:f1:83:ad (client1) via ens33
+May 13 13:24:58 server1.ddp.is dhcpd[9069]: DHCPDISCOVER from 00:0c:29:77:93:07 via ens33
+May 13 13:24:59 server1.ddp.is dhcpd[9069]: DHCPOFFER on 192.168.100.101 to 00:0c:29:77:93:07 (client2) via ens33
+May 13 13:24:59 server1.ddp.is dhcpd[9069]: DHCPREQUEST for 192.168.100.101 (192.168.100.10) from 00:0c:29:77:93:07 (client2) via ens33
+May 13 13:24:59 server1.ddp.is dhcpd[9069]: DHCPACK on 192.168.100.101 to 00:0c:29:77:93:07 (client2) via ens33

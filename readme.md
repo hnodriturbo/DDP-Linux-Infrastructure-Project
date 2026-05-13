@@ -69,13 +69,14 @@ The infrastructure includes:
 │   │       ├── chrony/
 │   │       │   └── chrony.conf
 │   │       ├── netplan/
-│   │       │   └── 00-installer-config.yaml
+│   │       │   └── 00-installer-config.yaml  ✅
 │   │       ├── rsyslog.d/
-│   │       │   └── 10-ddp-client.conf
+│   │       │   └── 10-ddp-client.conf  ✅
 │   │       ├── ssh/
 │   │       │   └── ssh_config
 │   │       ├── hostname
-│   │       └── hosts
+│   │       ├── hosts
+│   │       └── static_hosts  ✅
 │   │
 │   ├── Client2_CentOS/
 │   │   └── etc/
@@ -84,14 +85,18 @@ The infrastructure includes:
 │   │       │       └── public.xml
 │   │       ├── NetworkManager/
 │   │       │   └── system-connections/
-│   │       │       └── ens160.nmconnection
+│   │       │       └── ens160.nmconnection ✅
 │   │       ├── rsyslog.d/
-│   │       │   └── 10-ddp-client.conf
+│   │       │   └── 10-ddp-client.conf  ✅
 │   │       ├── ssh/
 │   │       │   └── sshd_config
+│   │       ├── sysconfig/
+│   │       │   └── network-scripts/
+│   │       │       └── ifcfg-ens160 ✅
 │   │       ├── chrony.conf
 │   │       ├── hostname
-│   │       └── hosts
+│   │       ├── hosts
+│   │       └── static_hosts  ✅
 │   │
 │   └── Server1_Ubuntu/
 │       └── etc/
@@ -105,27 +110,28 @@ The infrastructure includes:
 │           ├── cups/
 │           │   └── cupsd.conf
 │           ├── default/
-│           │   └── isc-dhcp-server
+│           │   └── isc-dhcp-server ✅
 │           ├── dhcp/
-│           │   └── dhcpd.conf
+│           │   └── dhcpd.conf  ✅
 │           ├── dovecot/
 │           │   └── conf.d/
 │           │       └── 10-mail.conf
 │           ├── netplan/
-│           │   └── 00-installer-config.yaml
+│           │   └── 00-installer-config.yaml  ✅
 │           ├── postfix/
 │           │   └── main.cf
 │           ├── rsyslog.d/
-│           │   └── 10-ddp-server.conf
+│           │   └── 10-ddp-server.conf  ✅
 │           ├── ssh/
 │           │   └── sshd_config
 │           ├── systemd/
-│           │   └── journald.conf
+│           │   └── journald.conf ✅
 │           ├── ufw/
 │           │   └── user.rules
 │           ├── hostname
 │           ├── hosts
-│           └── sysctl.conf
+│           ├── static_hosts
+│           └── sysctl.conf ✅
 │
 ├── Documentation/
 │   ├── Screenshots/
@@ -134,22 +140,22 @@ The infrastructure includes:
 │   │   │   ├── dhcp.png
 │   │   │   ├── dns_resolution.png
 │   │   │   ├── final_validation.png
-│   │   │   ├── hosts_static.png
-│   │   │   ├── netplan_static.png
+│   │   │   ├── static_hosts.png  ✅
+│   │   │   ├── static_netplan_00-installer-config.png  ✅
 │   │   │   ├── ssh_key_login.png
-│   │   │   ├── static_network_validation.png
-│   │   │   └── syslog_test.png
+│   │   │   ├── static_network_validation.png ✅
+│   │   │   └── syslog_test.png ✅
 │   │   │
 │   │   ├── Client2_CentOS/
 │   │   │   ├── chrony.png
 │   │   │   ├── dhcp.png
 │   │   │   ├── dns_resolution.png
 │   │   │   ├── final_validation.png
-│   │   │   ├── hosts_static.png
-│   │   │   ├── nmtui_static.png
+│   │   │   ├── static_hosts.png  ✅
+│   │   │   ├── nmtui_static.png  ✅
 │   │   │   ├── ssh_key_login.png
-│   │   │   ├── static_network_validation.png
-│   │   │   └── syslog_test.png
+│   │   │   ├── static_network_validation.png ✅
+│   │   │   └── syslog_test.png ✅
 │   │   │
 │   │   └── Server1_Ubuntu/
 │   │       ├── backup_script_execution.png
@@ -158,21 +164,22 @@ The infrastructure includes:
 │   │       ├── cron_schedule.png
 │   │       ├── cups_status.png
 │   │       ├── cups_web_interface.png
-│   │       ├── dhcp_leases.png
-│   │       ├── dhcp_server_status.png
+│   │       ├── dhcpd_config.png  ✅
+│   │       ├── dhcp_leases.png ✅
+│   │       ├── dhcp_server_status.png  ✅
 │   │       ├── dig_forward_lookup.png
 │   │       ├── dig_reverse_lookup.png
 │   │       ├── dovecot_status.png
 │   │       ├── final_validation.png
-│   │       ├── hosts_static.png
-│   │       ├── journald_persistent.png
-│   │       ├── netplan_static.png
+│   │       ├── static_hosts.png  ✅
+│   │       ├── journald_persistent.png ✅
+│   │       ├── static_netplan_00-installer-config.png  ✅
 │   │       ├── postfix_status.png
 │   │       ├── roundcube_login.png
-│   │       ├── rsyslog_server_status.png
+│   │       ├── rsyslog_server_status.png ✅
 │   │       ├── ssh_status.png
-│   │       ├── static_network_validation.png
-│   │       ├── syslog_received.png
+│   │       ├── static_network_validation.png ✅
+│   │       ├── syslog_received.png           ✅
 │   │       └── ufw_status.png
 │   │
 │   ├── Configuration_Guide.md
@@ -185,6 +192,7 @@ The infrastructure includes:
 │   ├── dhcp/
 │   │   ├── client1_lease.txt
 │   │   ├── client2_lease.txt
+│   │   ├── dhcp_status.txt
 │   │   └── dhcpd.leases
 │   │
 │   ├── dns/

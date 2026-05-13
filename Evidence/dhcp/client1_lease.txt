@@ -1,0 +1,27 @@
+# ============================================================
+# DHCP Evidence - client1 DHCP Lease
+# ============================================================
+# File: Evidence/dhcp/client1_lease.txt
+# Host: client1.ddp.is
+# Purpose:
+# - Shows that client1 received an IPv4 address automatically from server1 DHCP.
+# - Shows the default gateway received through DHCP.
+# - Shows DNS server and domain settings received through DHCP.
+# ============================================================
+
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+ens33            UNKNOWN        192.168.100.100/24 fe80::20c:29ff:fef1:83ad/64 
+
+default via 192.168.100.10 dev ens33 proto dhcp src 192.168.100.100 metric 20100 
+192.168.100.0/24 dev ens33 proto kernel scope link src 192.168.100.100 metric 100 
+
+Global
+         Protocols: -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+  resolv.conf mode: stub
+
+Link 2 (ens33)
+    Current Scopes: DNS
+         Protocols: +DefaultRoute -LLMNR -mDNS -DNSOverTLS DNSSEC=no/unsupported
+Current DNS Server: 192.168.100.10
+       DNS Servers: 192.168.100.10
+        DNS Domain: ddp.is
