@@ -2,21 +2,21 @@
 # Netplan Configuration - Ubuntu Server
 # ================================
 # Purpose:
-# - ens33 = Internal LAN (VMnet5) → static IP
+# - ens33 = Internal LAN (VMnet6) → static IP
 # - ens37 = NAT interface → internet (DHCP)
 # ================================
 
 # Netplan config version and renderer NetworkManager (GUI-based)
 network:
   version: 2
-  renderer: NetworkManager
+  renderer: networkd
 
   ethernets:
-    # Lan interface using VMnet5 - Disable DHCP for static IP - Set the IP
+    # Lan interface using VMnet6 - Disable DHCP for static IP - Set the IP
     ens33:
       dhcp4: no
       addresses:
-        - 192.168.56.10/24
+        - 192.168.100.10/24
     
     # NAT interface with active DHCP auto IP from VMware NAT
     ens37:

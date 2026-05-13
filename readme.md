@@ -68,30 +68,30 @@ The infrastructure includes:
 │   │   └── etc/
 │   │       ├── chrony/
 │   │       │   └── chrony.conf
-│   │       ├── hostname
-│   │       ├── hosts
 │   │       ├── netplan/
 │   │       │   └── 00-installer-config.yaml
 │   │       ├── rsyslog.d/
 │   │       │   └── 10-ddp-client.conf
-│   │       └── ssh/
-│   │           └── ssh_config
+│   │       ├── ssh/
+│   │       │   └── ssh_config
+│   │       ├── hostname
+│   │       └── hosts
 │   │
 │   ├── Client2_CentOS/
 │   │   └── etc/
-│   │       ├── chrony.conf
 │   │       ├── firewalld/
 │   │       │   └── zones/
 │   │       │       └── public.xml
-│   │       ├── hostname
-│   │       ├── hosts
 │   │       ├── NetworkManager/
 │   │       │   └── system-connections/
 │   │       │       └── ens160.nmconnection
 │   │       ├── rsyslog.d/
 │   │       │   └── 10-ddp-client.conf
-│   │       └── ssh/
-│   │           └── sshd_config
+│   │       ├── ssh/
+│   │       │   └── sshd_config
+│   │       ├── chrony.conf
+│   │       ├── hostname
+│   │       └── hosts
 │   │
 │   └── Server1_Ubuntu/
 │       └── etc/
@@ -111,8 +111,6 @@ The infrastructure includes:
 │           ├── dovecot/
 │           │   └── conf.d/
 │           │       └── 10-mail.conf
-│           ├── hostname
-│           ├── hosts
 │           ├── netplan/
 │           │   └── 00-installer-config.yaml
 │           ├── postfix/
@@ -123,63 +121,65 @@ The infrastructure includes:
 │           │   └── sshd_config
 │           ├── systemd/
 │           │   └── journald.conf
-│           ├── sysctl.conf
-│           └── ufw/
-│               └── user.rules
+│           ├── ufw/
+│           │   └── user.rules
+│           ├── hostname
+│           ├── hosts
+│           └── sysctl.conf
 │
 ├── Documentation/
+│   ├── Screenshots/
+│   │   ├── Client1_Ubuntu/
+│   │   │   ├── chrony.png
+│   │   │   ├── dhcp.png
+│   │   │   ├── dns_resolution.png
+│   │   │   ├── final_validation.png
+│   │   │   ├── hosts_static.png
+│   │   │   ├── netplan_static.png
+│   │   │   ├── ssh_key_login.png
+│   │   │   ├── static_network_validation.png
+│   │   │   └── syslog_test.png
+│   │   │
+│   │   ├── Client2_CentOS/
+│   │   │   ├── chrony.png
+│   │   │   ├── dhcp.png
+│   │   │   ├── dns_resolution.png
+│   │   │   ├── final_validation.png
+│   │   │   ├── hosts_static.png
+│   │   │   ├── nmtui_static.png
+│   │   │   ├── ssh_key_login.png
+│   │   │   ├── static_network_validation.png
+│   │   │   └── syslog_test.png
+│   │   │
+│   │   └── Server1_Ubuntu/
+│   │       ├── backup_script_execution.png
+│   │       ├── bind9_status.png
+│   │       ├── chrony_status.png
+│   │       ├── cron_schedule.png
+│   │       ├── cups_status.png
+│   │       ├── cups_web_interface.png
+│   │       ├── dhcp_leases.png
+│   │       ├── dhcp_server_status.png
+│   │       ├── dig_forward_lookup.png
+│   │       ├── dig_reverse_lookup.png
+│   │       ├── dovecot_status.png
+│   │       ├── final_validation.png
+│   │       ├── hosts_static.png
+│   │       ├── journald_persistent.png
+│   │       ├── netplan_static.png
+│   │       ├── postfix_status.png
+│   │       ├── roundcube_login.png
+│   │       ├── rsyslog_server_status.png
+│   │       ├── ssh_status.png
+│   │       ├── static_network_validation.png
+│   │       ├── syslog_received.png
+│   │       └── ufw_status.png
+│   │
 │   ├── Configuration_Guide.md
 │   ├── Network_Infrastructure.png
 │   ├── Network_Structure_Basic_Text_Diagram.md
 │   ├── Project_Report.pdf
-│   ├── Ultimate_Final_Project_Guide.md
-│   │
-│   └── Screenshots/
-│       ├── Client1_Ubuntu/
-│       │   ├── chrony.png
-│       │   ├── dhcp.png
-│       │   ├── dns_resolution.png
-│       │   ├── final_validation.png
-│       │   ├── hosts_static.png
-│       │   ├── netplan_static.png
-│       │   ├── ssh_key_login.png
-│       │   ├── static_network_validation.png
-│       │   └── syslog_test.png
-│       │
-│       ├── Client2_CentOS/
-│       │   ├── chrony.png
-│       │   ├── dhcp.png
-│       │   ├── dns_resolution.png
-│       │   ├── final_validation.png
-│       │   ├── hosts_static.png
-│       │   ├── nmtui_static.png
-│       │   ├── ssh_key_login.png
-│       │   ├── static_network_validation.png
-│       │   └── syslog_test.png
-│       │
-│       └── Server1_Ubuntu/
-│           ├── backup_script_execution.png
-│           ├── bind9_status.png
-│           ├── chrony_status.png
-│           ├── cron_schedule.png
-│           ├── cups_status.png
-│           ├── cups_web_interface.png
-│           ├── dhcp_leases.png
-│           ├── dhcp_server_status.png
-│           ├── dig_forward_lookup.png
-│           ├── dig_reverse_lookup.png
-│           ├── dovecot_status.png
-│           ├── final_validation.png
-│           ├── hosts_static.png
-│           ├── journald_persistent.png
-│           ├── netplan_static.png
-│           ├── postfix_status.png
-│           ├── roundcube_login.png
-│           ├── rsyslog_server_status.png
-│           ├── ssh_status.png
-│           ├── static_network_validation.png
-│           ├── syslog_received.png
-│           └── ufw_status.png
+│   └── Ultimate_Final_Project_Guide.md
 │
 ├── Evidence/
 │   ├── dhcp/
@@ -225,18 +225,18 @@ The infrastructure includes:
 │       └── user_list_verification.txt
 │
 └── Scripts/
-    ├── backup_home.sh
-    ├── create_users.sh
-    ├── Linux_Users.CSV
-    ├── system_hardening.sh
-    │
     ├── Testing/
     │   ├── test_backup.sh
     │   ├── test_mail.sh
     │   └── test_syslog.sh
     │
-    └── User_Creation_Logs/
-        └── create_users.log
+    ├── User_Creation_Logs/
+    │   └── create_users.log
+    │
+    ├── backup_home.sh
+    ├── create_users.sh
+    ├── Linux_Users.CSV
+    └── system_hardening.sh
 ```
 
 ---
