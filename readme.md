@@ -137,7 +137,7 @@ The infrastructure includes:
 │   ├── Screenshots/
 │   │   ├── Client1_Ubuntu/
 │   │   │   ├── chrony.png
-│   │   │   ├── dhcp.png
+│   │   │   ├── dhcp.png  ✅
 │   │   │   ├── dns_resolution.png
 │   │   │   ├── final_validation.png
 │   │   │   ├── static_hosts.png  ✅
@@ -148,7 +148,7 @@ The infrastructure includes:
 │   │   │
 │   │   ├── Client2_CentOS/
 │   │   │   ├── chrony.png
-│   │   │   ├── dhcp.png
+│   │   │   ├── dhcp.png  ✅
 │   │   │   ├── dns_resolution.png
 │   │   │   ├── final_validation.png
 │   │   │   ├── static_hosts.png  ✅
@@ -190,10 +190,10 @@ The infrastructure includes:
 │
 ├── Evidence/
 │   ├── dhcp/
-│   │   ├── client1_lease.txt
-│   │   ├── client2_lease.txt
-│   │   ├── dhcp_status.txt
-│   │   └── dhcpd.leases
+│   │   ├── client1_lease.txt ✅
+│   │   ├── client2_lease.txt ✅
+│   │   ├── dhcp_status.txt ✅
+│   │   └── dhcpd.leases  ✅
 │   │
 │   ├── dns/
 │   │   ├── dig_forward_lookup.txt
