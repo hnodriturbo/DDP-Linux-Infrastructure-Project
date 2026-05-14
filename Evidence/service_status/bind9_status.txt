@@ -1,3 +1,12 @@
+# ================================
+# BIND9 Service Status
+# ================================
+# Path: /DDP-Linux-Infrastructure-Project/Evidence/service_status/bind9_status.txt
+# Purpose:
+# - Verify BIND9 DNS service is active and running
+# - Confirm named.service startup and DNS operation
+# ================================
+
 hnodri@server1:~$ systemctl status bind9 --no-pager | tee ~/DDP-Linux-Infrastructure-Project/Evidence/service_status/bind9_status.txt
 ● named.service - BIND Domain Name Server
      Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; preset: enabled)

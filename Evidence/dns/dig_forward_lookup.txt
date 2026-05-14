@@ -1,3 +1,11 @@
+# ================================
+# DNS Forward Lookup Verification
+# ================================
+# Path: /DDP-Linux-Infrastructure-Project/Evidence/dns/dig_forward_lookup.txt
+# Purpose:
+# - Verify forward DNS resolution for ddp.is
+# - Confirm server1.ddp.is resolves to the correct IP address
+# ================================
 
 ; <<>> DiG 9.18.39-0ubuntu0.24.04.3-Ubuntu <<>> @192.168.100.10 server1.ddp.is
 ; (1 server found)

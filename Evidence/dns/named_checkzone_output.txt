@@ -1,3 +1,12 @@
+# ================================
+# BIND9 Zone Validation Output
+# ================================
+# Path: /DDP-Linux-Infrastructure-Project/Evidence/dns/named_checkzone_output.txt
+# Purpose:
+# - Verify BIND9 forward and reverse zone syntax
+# - Confirm DNS zones load successfully without errors
+# ================================
+
 zone ddp.is/IN: loaded serial 2026051401
 OK
 zone 100.168.192.in-addr.arpa/IN: loaded serial 2026051401

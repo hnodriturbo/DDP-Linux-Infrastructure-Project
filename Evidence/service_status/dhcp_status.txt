@@ -1,3 +1,12 @@
+# ================================
+# DHCP Service Status
+# ================================
+# Path: /DDP-Linux-Infrastructure-Project/Evidence/service_status/dhcp_status.txt
+# Purpose:
+# - Verify ISC DHCP server is active and operational
+# - Confirm DHCP leases are assigned to client systems
+# ================================
+
 hnodri@server1:~$ systemctl status isc-dhcp-server --no-pager | tee ~/DDP-Linux-Infrastructure-Project/Evidence/service_status/dhcp_status.txt
 ● isc-dhcp-server.service - ISC DHCP IPv4 server
      Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
