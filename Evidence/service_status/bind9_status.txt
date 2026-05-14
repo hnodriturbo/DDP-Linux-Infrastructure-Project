@@ -1,0 +1,23 @@
+hnodri@server1:~$ systemctl status bind9 --no-pager | tee ~/DDP-Linux-Infrastructure-Project/Evidence/service_status/bind9_status.txt
+● named.service - BIND Domain Name Server
+     Loaded: loaded (/usr/lib/systemd/system/named.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-14 13:44:27 GMT; 30min ago
+       Docs: man:named(8)
+   Main PID: 9545 (named)
+     Status: "running"
+      Tasks: 8 (limit: 4541)
+     Memory: 23.4M (peak: 23.9M)
+        CPU: 230ms
+     CGroup: /system.slice/named.service
+             └─9545 /usr/sbin/named -f -u bind
+
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:500:a8::e#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:7fd::1#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:500:9f::42#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:dc3::35#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:500:2f::f#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:500:1::53#53
+May 14 13:44:27 server1.ddp.is named[9545]: network unreachable resolving './NS/IN': 2001:500:2d::d#53
+May 14 13:44:27 server1.ddp.is named[9545]: managed-keys-zone: Key 20326 for zone . is now trusted (acceptance timer complete)
+May 14 13:44:27 server1.ddp.is named[9545]: managed-keys-zone: Key 38696 for zone . is now trusted (acceptance timer complete)

@@ -1,0 +1,27 @@
+; ================================
+; BIND9 Forward Zone - ddp.is
+; ================================
+; Path: /etc/bind/db.ddp.is
+; Purpose:
+; - Resolve DDP hostnames to IPv4 addresses
+; - Support DHCP, SSH, mail, CUPS, NTP, and Syslog by hostname
+; ================================
+
+$TTL 604800
+@   IN  SOA server1.ddp.is. admin.ddp.is. (
+        2026051401 ; Serial
+        604800     ; Refresh
+        86400      ; Retry
+        2419200    ; Expire
+        604800 )   ; Negative Cache TTL
+
+@       IN  NS      server1.ddp.is.
+@       IN  MX 10   mail.ddp.is.
+
+server1 IN  A       192.168.100.10
+client1 IN  A       192.168.100.100
+client2 IN  A       192.168.100.101
+mail    IN  A       192.168.100.10
+print   IN  A       192.168.100.10
+ntp     IN  A       192.168.100.10
+syslog  IN  A       192.168.100.10

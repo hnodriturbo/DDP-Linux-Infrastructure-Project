@@ -1,0 +1,22 @@
+hnodri@server1:~$ systemctl status isc-dhcp-server --no-pager | tee ~/DDP-Linux-Infrastructure-Project/Evidence/service_status/dhcp_status.txt
+● isc-dhcp-server.service - ISC DHCP IPv4 server
+     Loaded: loaded (/usr/lib/systemd/system/isc-dhcp-server.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-14 12:59:28 GMT; 1h 15min ago
+       Docs: man:dhcpd(8)
+   Main PID: 7610 (dhcpd)
+      Tasks: 1 (limit: 4541)
+     Memory: 3.8M (peak: 4.3M)
+        CPU: 104ms
+     CGroup: /system.slice/isc-dhcp-server.service
+             └─7610 dhcpd -user dhcpd -group dhcpd -f -4 -pf /run/dhcp-server/dhcpd.pid -cf /etc/dhcp/dhcpd.conf ens33
+
+May 14 14:02:11 server1.ddp.is dhcpd[7610]: DHCPREQUEST for 192.168.100.101 from 00:0c:29:77:93:07 (client2) via ens33
+May 14 14:02:11 server1.ddp.is dhcpd[7610]: DHCPACK on 192.168.100.101 to 00:0c:29:77:93:07 (client2) via ens33
+May 14 14:05:10 server1.ddp.is dhcpd[7610]: DHCPREQUEST for 192.168.100.100 from 00:0c:29:f1:83:ad (client1) via ens33
+May 14 14:05:10 server1.ddp.is dhcpd[7610]: DHCPACK on 192.168.100.100 to 00:0c:29:f1:83:ad (client1) via ens33
+May 14 14:07:11 server1.ddp.is dhcpd[7610]: DHCPREQUEST for 192.168.100.101 from 00:0c:29:77:93:07 (client2) via ens33
+May 14 14:07:11 server1.ddp.is dhcpd[7610]: DHCPACK on 192.168.100.101 to 00:0c:29:77:93:07 (client2) via ens33
+May 14 14:10:10 server1.ddp.is dhcpd[7610]: DHCPREQUEST for 192.168.100.100 from 00:0c:29:f1:83:ad (client1) via ens33
+May 14 14:10:10 server1.ddp.is dhcpd[7610]: DHCPACK on 192.168.100.100 to 00:0c:29:f1:83:ad (client1) via ens33
+May 14 14:12:11 server1.ddp.is dhcpd[7610]: DHCPREQUEST for 192.168.100.101 from 00:0c:29:77:93:07 (client2) via ens33
+May 14 14:12:11 server1.ddp.is dhcpd[7610]: DHCPACK on 192.168.100.101 to 00:0c:29:77:93:07 (client2) via ens33

@@ -25,3 +25,54 @@ Link 2 (ens33)
 Current DNS Server: 192.168.100.10
        DNS Servers: 192.168.100.10
         DNS Domain: ddp.is
+
+# ============================================================
+# Lease from SERVER1_UBUNTU:
+# ============================================================
+
+lease 192.168.100.100 {
+  starts 3 2026/05/13 15:24:42;
+  ends 3 2026/05/13 15:34:42;
+  tstp 3 2026/05/13 15:34:42;
+  cltt 3 2026/05/13 15:24:42;
+  binding state free;
+  hardware ethernet 00:0c:29:f1:83:ad;
+  uid "\001\000\014)\361\203\255";
+}
+lease 192.168.100.101 {
+  starts 3 2026/05/13 15:24:58;
+  ends 3 2026/05/13 15:34:58;
+  tstp 3 2026/05/13 15:34:58;
+  cltt 3 2026/05/13 15:24:58;
+  binding state free;
+  hardware ethernet 00:0c:29:77:93:07;
+--
+lease 192.168.100.100 {
+  starts 4 2026/05/14 13:00:09;
+  ends 4 2026/05/14 13:10:09;
+  cltt 4 2026/05/14 13:00:09;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:f1:83:ad;
+  uid "\001\000\014)\361\203\255";
+  client-hostname "client1";
+}
+lease 192.168.100.101 {
+  starts 4 2026/05/14 13:02:11;
+  ends 4 2026/05/14 13:12:11;
+  cltt 4 2026/05/14 13:02:11;
+  binding state active;
+--
+lease 192.168.100.100 {
+  starts 4 2026/05/14 13:05:10;
+  ends 4 2026/05/14 13:15:10;
+  cltt 4 2026/05/14 13:05:10;
+  binding state active;
+  next binding state free;
+  rewind binding state free;
+  hardware ethernet 00:0c:29:f1:83:ad;
+  uid "\001\000\014)\361\203\255";
+  client-hostname "client1";
+}
+

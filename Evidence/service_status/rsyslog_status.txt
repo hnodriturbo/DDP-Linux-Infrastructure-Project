@@ -1,0 +1,22 @@
+hnodri@server1:~$ systemctl status rsyslog --no-pager | tee ~/DDP-Linux-Infrastructure-Project/Evidence/service_status/rsyslog_status.txt
+● rsyslog.service - System Logging Service
+     Loaded: loaded (/usr/lib/systemd/system/rsyslog.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-05-14 12:18:27 GMT; 1h 56min ago
+TriggeredBy: ● syslog.socket
+       Docs: man:rsyslogd(8)
+             man:rsyslog.conf(5)
+             https://www.rsyslog.com/doc/
+   Main PID: 1164 (rsyslogd)
+      Tasks: 10 (limit: 4541)
+     Memory: 6.9M (peak: 7.4M)
+        CPU: 1.529s
+     CGroup: /system.slice/rsyslog.service
+             └─1164 /usr/sbin/rsyslogd -n -iNONE
+
+May 14 12:18:24 server1.ddp.is systemd[1]: Starting rsyslog.service - System Logging Service...
+May 14 12:18:27 server1.ddp.is rsyslogd[1164]: warning during parsing file /etc/rsyslog.conf, on or before line 54: STOP is followed by unreachable statements!  [v8.2312.0 try https://www.rsyslog.com/e/2357 ]
+May 14 12:18:27 server1.ddp.is rsyslogd[1164]: imuxsock: Acquired UNIX socket '/run/systemd/journal/syslog' (fd 3) from systemd.  [v8.2312.0]
+May 14 12:18:27 server1.ddp.is rsyslogd[1164]: rsyslogd's groupid changed to 102
+May 14 12:18:27 server1.ddp.is rsyslogd[1164]: rsyslogd's userid changed to 102
+May 14 12:18:27 server1.ddp.is rsyslogd[1164]: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="1164" x-info="https://www.rsyslog.com"] start
+May 14 12:18:27 server1.ddp.is systemd[1]: Started rsyslog.service - System Logging Service.

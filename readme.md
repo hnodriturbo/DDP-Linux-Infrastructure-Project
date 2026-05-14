@@ -42,18 +42,18 @@ The infrastructure includes:
                                │
                      ens34 (LAN/Internal)
                                │
-        ┌────────────────┼────────────────┐
-        │                                             │
-   client1.ddp.is                               client2.ddp.is
-   192.168.100.20                               192.168.100.30
+              ┌────────────────┼────────────────┐
+              │                                 │
+       client1.ddp.is                   client2.ddp.is
+       192.168.100.100                  192.168.100.101
 ```
 
 ### Table overview of the network structure:
-| Device         | Role           | IP Address     |
-| -------------- | -------------- | -------------- |
-| server1.ddp.is | Main Server    | 192.168.100.10 |
-| client1.ddp.is | Debian Client  | 192.168.100.20 |
-| client2.ddp.is | Red Hat Client | 192.168.100.30 |
+| Device         | Role           | IP Address      |
+| -------------- | -------------- | --------------- |
+| server1.ddp.is | Main Server    | 192.168.100.10  |
+| client1.ddp.is | Debian Client  | 192.168.100.100 |
+| client2.ddp.is | Red Hat Client | 192.168.100.101 |
 
 ---
 
@@ -74,8 +74,8 @@ The infrastructure includes:
 │   │       │   └── 10-ddp-client.conf  ✅
 │   │       ├── ssh/
 │   │       │   └── ssh_config
-│   │       ├── hostname
-│   │       ├── hosts
+│   │       ├── hostname  ✅
+│   │       ├── hosts ✅
 │   │       └── static_hosts  ✅
 │   │
 │   ├── Client2_CentOS/
@@ -94,8 +94,8 @@ The infrastructure includes:
 │   │       │   └── network-scripts/
 │   │       │       └── ifcfg-ens160 ✅
 │   │       ├── chrony.conf
-│   │       ├── hostname
-│   │       ├── hosts
+│   │       ├── hostname  ✅
+│   │       ├── hosts ✅
 │   │       └── static_hosts  ✅
 │   │
 │   └── Server1_Ubuntu/
@@ -128,9 +128,9 @@ The infrastructure includes:
 │           │   └── journald.conf ✅
 │           ├── ufw/
 │           │   └── user.rules
-│           ├── hostname
-│           ├── hosts
-│           ├── static_hosts
+│           ├── hostname  ✅
+│           ├── hosts ✅
+│           ├── static_hosts  ✅
 │           └── sysctl.conf ✅
 │
 ├── Documentation/
@@ -138,7 +138,7 @@ The infrastructure includes:
 │   │   ├── Client1_Ubuntu/
 │   │   │   ├── chrony.png
 │   │   │   ├── dhcp.png  ✅
-│   │   │   ├── dns_resolution.png
+│   │   │   ├── dns_resolution.png  ✅
 │   │   │   ├── final_validation.png
 │   │   │   ├── static_hosts.png  ✅
 │   │   │   ├── static_netplan_00-installer-config.png  ✅
@@ -149,7 +149,7 @@ The infrastructure includes:
 │   │   ├── Client2_CentOS/
 │   │   │   ├── chrony.png
 │   │   │   ├── dhcp.png  ✅
-│   │   │   ├── dns_resolution.png
+│   │   │   ├── dns_resolution.png  ✅
 │   │   │   ├── final_validation.png
 │   │   │   ├── static_hosts.png  ✅
 │   │   │   ├── nmtui_static.png  ✅
@@ -159,7 +159,7 @@ The infrastructure includes:
 │   │   │
 │   │   └── Server1_Ubuntu/
 │   │       ├── backup_script_execution.png
-│   │       ├── bind9_status.png
+│   │       ├── bind9_status.png  ✅
 │   │       ├── chrony_status.png
 │   │       ├── cron_schedule.png
 │   │       ├── cups_status.png
@@ -167,8 +167,8 @@ The infrastructure includes:
 │   │       ├── dhcpd_config.png  ✅
 │   │       ├── dhcp_leases.png ✅
 │   │       ├── dhcp_server_status.png  ✅
-│   │       ├── dig_forward_lookup.png
-│   │       ├── dig_reverse_lookup.png
+│   │       ├── dig_forward_lookup.png  ✅
+│   │       ├── dig_reverse_lookup.png  ✅
 │   │       ├── dovecot_status.png
 │   │       ├── final_validation.png
 │   │       ├── static_hosts.png  ✅
@@ -196,9 +196,9 @@ The infrastructure includes:
 │   │   └── dhcpd.leases  ✅
 │   │
 │   ├── dns/
-│   │   ├── dig_forward_lookup.txt
-│   │   ├── dig_reverse_lookup.txt
-│   │   └── named_checkzone_output.txt
+│   │   ├── dig_forward_lookup.txt  ✅
+│   │   ├── dig_reverse_lookup.txt  ✅
+│   │   └── named_checkzone_output.txt  ✅
 │   │
 │   ├── firewall/
 │   │   ├── firewalld_status.txt
@@ -218,13 +218,13 @@ The infrastructure includes:
 │   │   └── server1-udp-top20-scan.txt
 │   │
 │   ├── service_status/
-│   │   ├── bind9_status.txt
+│   │   ├── bind9_status.txt  ✅
 │   │   ├── chrony_status.txt
 │   │   ├── cups_status.txt
-│   │   ├── dhcp_status.txt
+│   │   ├── dhcp_status.txt ✅
 │   │   ├── dovecot_status.txt
 │   │   ├── postfix_status.txt
-│   │   ├── rsyslog_status.txt
+│   │   ├── rsyslog_status.txt  ✅
 │   │   └── ssh_status.txt
 │   │
 │   └── users/

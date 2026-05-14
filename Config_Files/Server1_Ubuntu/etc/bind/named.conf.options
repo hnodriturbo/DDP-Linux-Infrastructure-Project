@@ -1,0 +1,26 @@
+# ================================
+# BIND9 Options - DDP DNS Server
+# ================================
+# Path: /etc/bind/named.conf.options
+# Purpose:
+# - Listen on localhost and the DDP LAN address
+# - Allow DNS queries from the DDP private subnet
+# - Forward external DNS lookups to public resolvers
+# ================================
+
+options {
+    directory "/var/cache/bind";
+
+    listen-on { 127.0.0.1; 192.168.100.10; };
+    listen-on-v6 { none; };
+
+    allow-query { localhost; 192.168.100.0/24; };
+    recursion yes;
+
+    forwarders {
+        1.1.1.1;
+        8.8.8.8;
+    };
+
+    dnssec-validation auto;
+};

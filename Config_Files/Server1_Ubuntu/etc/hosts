@@ -1,0 +1,31 @@
+# ================================
+# Local Host Resolution Configuration
+# ================================
+# Purpose:
+# - Provide fallback local hostname mappings for DDP infrastructure
+# - Support hostname resolution before or if DNS is unavailable
+# - Allow server1, client1, and client2 communication by hostname
+# - Keep localhost and IPv6 defaults intact
+# ================================
+
+
+# Loopback interface
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+
+
+# Local system hostname
+127.0.1.1   client2.ddp.is client2
+
+
+# Local DDP infrastructure hosts
+192.168.100.10    server1.ddp.is server1
+192.168.100.100   client1.ddp.is client1
+192.168.100.101   client2.ddp.is client2
+
+# IPv6 localhost entries
+::1   ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
