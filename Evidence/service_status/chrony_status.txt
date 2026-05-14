@@ -9,7 +9,7 @@
 
 ● chrony.service - chrony, an NTP client/server
      Loaded: loaded (/usr/lib/systemd/system/chrony.service; enabled; preset: enabled)
-     Active: active (running) since Thu 2026-05-14 22:29:45 GMT; 25min ago
+     Active: active (running) since Thu 2026-05-14 22:29:45 GMT; 35min ago
        Docs: man:chronyd(8)
              man:chronyc(1)
              man:chrony.conf(5)
@@ -17,7 +17,7 @@
    Main PID: 12855 (chronyd)
       Tasks: 2 (limit: 4541)
      Memory: 1.5M (peak: 2.4M)
-        CPU: 249ms
+        CPU: 275ms
      CGroup: /system.slice/chrony.service
              ├─12855 /usr/sbin/chronyd -F 1
              └─12856 /usr/sbin/chronyd -F 1
@@ -35,25 +35,31 @@ May 14 22:29:53 server1.ddp.is chronyd[12855]: Selected source 93.95.229.195 (2.
 
 Reference ID    : 5D5FE5C3 (vps-93-95-229-195.1984.is)
 Stratum         : 3
-Ref time (UTC)  : Thu May 14 22:54:37 2026
-System time     : 0.000061188 seconds slow of NTP time
-Last offset     : -0.000110094 seconds
-RMS offset      : 0.000061144 seconds
-Frequency       : 19.487 ppm fast
-Residual freq   : -0.024 ppm
-Skew            : 0.492 ppm
-Root delay      : 0.004699261 seconds
-Root dispersion : 0.000500377 seconds
-Update interval : 129.7 seconds
+Ref time (UTC)  : Thu May 14 23:03:16 2026
+System time     : 0.000021530 seconds slow of NTP time
+Last offset     : -0.000026815 seconds
+RMS offset      : 0.000082650 seconds
+Frequency       : 19.080 ppm fast
+Residual freq   : -0.007 ppm
+Skew            : 0.379 ppm
+Root delay      : 0.004385022 seconds
+Root dispersion : 0.000611523 seconds
+Update interval : 128.7 seconds
 Leap status     : Normal
 
 MS Name/IP address         Stratum Poll Reach LastRx Last sample               
 ===============================================================================
-^- prod-ntp-4.ntp4.ps5.cano>     2   7   377    63   +315us[ +315us] +/-   26ms
-^- alphyn.canonical.com          2   7    37   248   +687us[ +601us] +/-   73ms
-^- prod-ntp-5.ntp4.ps5.cano>     2   7   377    61   -115us[ -115us] +/-   26ms
-^- prod-ntp-3.ntp1.ps5.cano>     2   7   377    62   +801us[ +801us] +/-   25ms
-^- 86-80-166-233.fixed.kpn.>     3   7   377    65  -1010us[-1120us] +/-   40ms
-^- ntppool1.time.nl              1   6   377    58   +232us[ +232us] +/-   21ms
-^- 36-158-17-89.xdsl.hringd>     2   7   377    62    +98us[  +98us] +/-   20ms
-^* vps-93-95-229-195.1984.is     2   7   377    64   -195us[ -305us] +/- 2670us
+^- prod-ntp-4.ntp4.ps5.cano>     2   8   377   255   +183us[  +43us] +/-   26ms
+^- alphyn.canonical.com          2   7   377    51  +1473us[+1473us] +/-   74ms
+^- prod-ntp-5.ntp4.ps5.cano>     2   8   377   255   -375us[ -515us] +/-   25ms
+^- prod-ntp-3.ntp1.ps5.cano>     2   8   377   253  +1025us[+1002us] +/-   26ms
+^- 86-80-166-233.fixed.kpn.>     3   8   377   256    +54us[  -86us] +/-   41ms
+^- ntppool1.time.nl              1   6   377    54   +362us[ +362us] +/-   20ms
+^- 36-158-17-89.xdsl.hringd>     2   7   377   125   +850us[ +850us] +/-   29ms
+^* vps-93-95-229-195.1984.is     2   7   377   126   -119us[ -146us] +/- 2722us
+
+Hostname                      NTP   Drop Int IntL Last     Cmd   Drop Int  Last
+===============================================================================
+client1.ddp.is                 40      0   6   -    20       0      0   -     -
+client2.ddp.is                 30      0   6   -    53       0      0   -     -
+localhost                       0      0   -   -     -      31      0   4     0

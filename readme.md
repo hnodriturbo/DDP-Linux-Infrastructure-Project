@@ -161,6 +161,7 @@ The infrastructure includes:
 │   │       ├── backup_script_execution.png
 │   │       ├── bind9_status.png  ✅
 │   │       ├── chrony_status.png ✅
+│   │       ├── chrony_clients.png ✅
 │   │       ├── cron_schedule.png
 │   │       ├── cups_status.png
 │   │       ├── cups_web_interface.png
