@@ -1,0 +1,4 @@
+Tolvudeild:x:1005:AndFri,SteGis,SinGud
+Rekstrardeild:x:1007:JonJon,EliGud,GudMag,JohTor,ValSte
+Framkvaemdadeild:x:1013:JonHar,EirEin,KolBjo,GerHaf,AriTei,BenSig,OlaHan,HelHel
+Framleidsludeild:x:1022:PetGun,FreHar,JonVal,VilTor,AxeKol,OrnSig,TorArn,RagOma,GudPal,OskSig,TorGud,ArnGud,JonRag

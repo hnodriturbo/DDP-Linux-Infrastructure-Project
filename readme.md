@@ -181,7 +181,8 @@ The infrastructure includes:
 │   │       ├── ssh_status.png
 │   │       ├── static_network_validation.png ✅
 │   │       ├── syslog_received.png           ✅
-│   │       └── ufw_status.png
+│   │       ├── ufw_status.png
+│   │       └── user_list_verification.png  ✅
 │   │
 │   ├── Configuration_Guide.md 
 │   ├── Network_Infrastructure.png  ✅
@@ -229,9 +230,9 @@ The infrastructure includes:
 │   │   └── ssh_status.txt
 │   │
 │   └── users/
-│       ├── department_groups.txt
-│       ├── home_directory_listing.txt
-│       └── user_list_verification.txt
+│       ├── department_groups.txt ✅
+│       ├── home_directory_listing.txt  ✅
+│       └── user_list_verification.txt  ✅
 │
 └── Scripts/
     ├── Testing/
@@ -240,11 +241,11 @@ The infrastructure includes:
     │   └── test_syslog.sh
     │
     ├── User_Creation_Logs/
-    │   └── create_users.log
+    │   └── create_users.log  ✅
     │
     ├── backup_home.sh
-    ├── create_users.sh
-    ├── Linux_Users.CSV
+    ├── create_users.sh ✅
+    ├── Linux_Users.CSV ✅
     └── system_hardening.sh
 ```
 

@@ -14,10 +14,10 @@
 2. [Network Architecture](#2-network-architecture)
 3. [Hostnames and Domain Identity](#3-hostnames-and-domain-identity)
 4. [Static Server Networking](#4-static-server-networking)
-5. [Persistent Logging and Centralized Syslog](#5-persistent-logging-and-centralized-syslog)
-6. [DHCP Configuration](#6-dhcp-configuration)
-7. [DNS / BIND9 Configuration](#7-dns--bind9-configuration)
-8. [Time Synchronization / Chrony](#8-time-synchronization--chrony)
+5. [DHCP Configuration](#5-dhcp-configuration)
+6. [DNS / BIND9 Configuration](#6-dns--bind9-configuration)
+7. [Time Synchronization / Chrony](#7-time-synchronization--chrony)
+8. [Persistent Logging and Centralized Syslog](#8-persistent-logging-and-centralized-syslog)
 9. [User and Group Automation](#9-user-and-group-automation)
 10. [SSH Hardening](#10-ssh-hardening)
 11. [Postfix, Dovecot, and Roundcube Mail](#11-postfix-dovecot-and-roundcube-mail)
@@ -265,70 +265,7 @@ Static networking is verified by checking that `ens33` has `192.168.100.10/24`, 
 
 ---
 
-## 5. Persistent Logging and Centralized Syslog
-
-### Purpose
-
-Logging is configured in two layers:
-
-1. persistent local journal logging
-2. centralized Syslog forwarding to `server1`
-
-Persistent logging keeps service and system logs after reboot. Centralized Syslog allows `server1` to collect logs from the clients for monitoring and troubleshooting.
-
-### Final Configuration
-
-Persistent journald logging is enabled on `server1` so logs survive reboot.
-
-Centralized rsyslog is configured as follows:
-
-| Machine          | Role          | Configuration                         |
-| ---------------- | ------------- | ------------------------------------- |
-| `server1.ddp.is` | Syslog server | Receives remote logs on port 514      |
-| `client1.ddp.is` | Syslog client | Forwards logs to `192.168.100.10:514` |
-| `client2.ddp.is` | Syslog client | Forwards logs to `192.168.100.10:514` |
-
-Remote logs are stored on `server1` under:
-
-```text
-/var/log/remote/
-```
-
-### Related Files
-
-**Server 1 Ubuntu**
-- `Config_Files/Server1_Ubuntu/etc/systemd/journald.conf`
-- `Config_Files/Server1_Ubuntu/etc/rsyslog.d/10-ddp-server.conf`
-
-**Client 1 Ubuntu**
-- `Config_Files/Client1_Ubuntu/etc/rsyslog.d/10-ddp-client.conf`
-
-**Client 2 CentOS**
-- `Config_Files/Client2_CentOS/etc/rsyslog.d/10-ddp-client.conf`
-
-### Evidence
-
-**Server 1 Ubuntu**
-- `Evidence/logs/journal_persistence_check.txt`
-- `Evidence/logs/syslog_test_results.txt`
-- `Evidence/service_status/rsyslog_status.txt`
-- `Documentation/Screenshots/Server1_Ubuntu/journald_persistent.png`
-- `Documentation/Screenshots/Server1_Ubuntu/rsyslog_server_status.png`
-- `Documentation/Screenshots/Server1_Ubuntu/syslog_received.png`
-
-**Client 1 Ubuntu**
-- `Documentation/Screenshots/Client1_Ubuntu/syslog_test.png`
-
-**Client 2 CentOS**
-- `Documentation/Screenshots/Client2_CentOS/syslog_test.png`
-
-### Verification
-
-Persistent logging is verified by checking journal history after reboot. Centralized Syslog is verified by sending test log messages from both clients and confirming that the messages appear under `/var/log/remote/` on `server1`.
-
----
-
-## 6. DHCP Configuration
+## 5. DHCP Configuration
 
 ### Purpose
 
@@ -401,7 +338,7 @@ The DHCP service was verified by checking the service status on `server1`, confi
 
 ---
 
-## 7. DNS / BIND9 Configuration
+## 6. DNS / BIND9 Configuration
 
 ### Purpose
 
@@ -468,7 +405,7 @@ DNS is verified by checking the BIND9 service status, validating the zone files,
 
 ---
 
-## 8. Time Synchronization / Chrony
+## 7. Time Synchronization / Chrony
 
 ### Purpose
 
@@ -520,6 +457,69 @@ Time synchronization is verified by checking Chrony service status and Chrony so
 
 ---
 
+## 8. Persistent Logging and Centralized Syslog
+
+### Purpose
+
+Logging is configured in two layers:
+
+1. persistent local journal logging
+2. centralized Syslog forwarding to `server1`
+
+Persistent logging keeps service and system logs after reboot. Centralized Syslog allows `server1` to collect logs from the clients for monitoring and troubleshooting.
+
+### Final Configuration
+
+Persistent journald logging is enabled on `server1` so logs survive reboot.
+
+Centralized rsyslog is configured as follows:
+
+| Machine          | Role          | Configuration                         |
+| ---------------- | ------------- | ------------------------------------- |
+| `server1.ddp.is` | Syslog server | Receives remote logs on port 514      |
+| `client1.ddp.is` | Syslog client | Forwards logs to `192.168.100.10:514` |
+| `client2.ddp.is` | Syslog client | Forwards logs to `192.168.100.10:514` |
+
+Remote logs are stored on `server1` under:
+
+```text
+/var/log/remote/
+```
+
+### Related Files
+
+**Server 1 Ubuntu**
+- `Config_Files/Server1_Ubuntu/etc/systemd/journald.conf`
+- `Config_Files/Server1_Ubuntu/etc/rsyslog.d/10-ddp-server.conf`
+
+**Client 1 Ubuntu**
+- `Config_Files/Client1_Ubuntu/etc/rsyslog.d/10-ddp-client.conf`
+
+**Client 2 CentOS**
+- `Config_Files/Client2_CentOS/etc/rsyslog.d/10-ddp-client.conf`
+
+### Evidence
+
+**Server 1 Ubuntu**
+- `Evidence/logs/journal_persistence_check.txt`
+- `Evidence/logs/syslog_test_results.txt`
+- `Evidence/service_status/rsyslog_status.txt`
+- `Documentation/Screenshots/Server1_Ubuntu/journald_persistent.png`
+- `Documentation/Screenshots/Server1_Ubuntu/rsyslog_server_status.png`
+- `Documentation/Screenshots/Server1_Ubuntu/syslog_received.png`
+
+**Client 1 Ubuntu**
+- `Documentation/Screenshots/Client1_Ubuntu/syslog_test.png`
+
+**Client 2 CentOS**
+- `Documentation/Screenshots/Client2_CentOS/syslog_test.png`
+
+### Verification
+
+Persistent logging is verified by checking journal history after reboot. Centralized Syslog is verified by sending test log messages from both clients and confirming that the messages appear under `/var/log/remote/` on `server1`.
+
+---
+
 ## 9. User and Group Automation
 
 ### Purpose
@@ -539,12 +539,12 @@ A Bash script is used to read the provided CSV file and create:
 
 Expected department groups:
 
-| Department Group   | Users | Linux Group Name   | Default Shell | Group Type    | Sudo Access | Force Password Change |
-| ------------------ | ----- | ------------------ | ------------- | ------------- | ----------- | --------------------- |
-| `Tolvudeild`       | 3     | `Tolvudeild`       | `/bin/bash`   | Supplementary | No          | Yes                   |
-| `Rekstrardeild`    | 5     | `Rekstrardeild`    | `/bin/bash`   | Supplementary | No          | Yes                   |
-| `Framkvaemdadeild` | 8     | `Framkvaemdadeild` | `/bin/bash`   | Supplementary | No          | Yes                   |
-| `Framleidsludeild` | 13    | `Framleidsludeild` | `/bin/bash`   | Supplementary | No          | Yes                   |
+| Department Group   |
+| ------------------ |
+| `Tolvudeild`       |
+| `Rekstrardeild`    |
+| `Framkvaemdadeild` |
+| `Framleidsludeild` |
 
 The users are created with home directories under:
 
