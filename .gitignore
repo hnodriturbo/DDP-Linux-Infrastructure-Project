@@ -9,6 +9,11 @@
 
 
 # ========================================
+# Special case for DDP-Linux-Infrastructure-Project/Markdown_Helpers
+# ========================================
+Markdown_Helpers/
+
+# ========================================
 # Critical Secret Files
 # ========================================
 
