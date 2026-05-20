@@ -1,3 +1,12 @@
+# ================================
+# Home Directory Listings - DDP server1
+# ================================
+# Path: /Evidence/users/home_directory_listings.txt
+# Purpose:
+# - Verify all DDP user home directories were created
+# - Confirm correct ownership and permissions (750)
+# ================================
+
 drwxr-x--- 2 AndFri AndFri 4096 May 19 17:27 /home/AndFri
 drwxr-x--- 2 AriTei AriTei 4096 May 19 17:27 /home/AriTei
 drwxr-x--- 2 ArnGud ArnGud 4096 May 19 17:27 /home/ArnGud

@@ -1,0 +1,40 @@
+# ================================
+# Maildir Directory Listing - DDP server1
+# ================================
+# Path: /Evidence/service_status/maildir_users.txt
+# Purpose:
+# - Verify Maildir folders were created for all DDP users
+# - Confirm correct permissions (700) and ownership
+# ================================
+
+drwx------ 5 AndFri AndFri 4096 May 20 19:29 /home/AndFri/Maildir
+drwx------ 5 ArnGud ArnGud 4096 May 20 19:29 /home/ArnGud/Maildir
+drwx------ 5 HelHel HelHel 4096 May 20 19:29 /home/HelHel/Maildir
+drwx------ 5 JonJon JonJon 4096 May 20 19:29 /home/JonJon/Maildir
+drwx------ 5 JohTor JohTor 4096 May 20 19:29 /home/JohTor/Maildir
+drwx------ 5 RagOma RagOma 4096 May 20 19:29 /home/RagOma/Maildir
+drwx------ 5 OskSig OskSig 4096 May 20 19:29 /home/OskSig/Maildir
+drwx------ 5 BenSig BenSig 4096 May 20 19:29 /home/BenSig/Maildir
+drwx------ 5 EliGud EliGud 4096 May 20 19:29 /home/EliGud/Maildir
+drwx------ 5 GerHaf GerHaf 4096 May 20 19:29 /home/GerHaf/Maildir
+drwx------ 5 PetGun PetGun 4096 May 20 19:29 /home/PetGun/Maildir
+drwx------ 5 GudMag GudMag 4096 May 20 19:29 /home/GudMag/Maildir
+drwx------ 5 KolBjo KolBjo 4096 May 20 19:29 /home/KolBjo/Maildir
+drwx------ 5 EirEin EirEin 4096 May 20 19:29 /home/EirEin/Maildir
+drwx------ 5 OlaHan OlaHan 4096 May 20 19:29 /home/OlaHan/Maildir
+drwx------ 5 JonHar JonHar 4096 May 20 19:29 /home/JonHar/Maildir
+drwx------ 5 OrnSig OrnSig 4096 May 20 19:29 /home/OrnSig/Maildir
+drwx------ 5 SteGis SteGis 4096 May 20 19:29 /home/SteGis/Maildir
+drwx------ 5 TorArn TorArn 4096 May 20 19:29 /home/TorArn/Maildir
+drwx------ 5 GudPal GudPal 4096 May 20 19:29 /home/GudPal/Maildir
+drwx------ 5 TorGud TorGud 4096 May 20 19:29 /home/TorGud/Maildir
+drwx------ 5 AxeKol AxeKol 4096 May 20 19:29 /home/AxeKol/Maildir
+drwx------ 5 JonRag JonRag 4096 May 20 19:29 /home/JonRag/Maildir
+drwx------ 5 JonVal JonVal 4096 May 20 19:29 /home/JonVal/Maildir
+drwx------ 5 VilTor VilTor 4096 May 20 19:29 /home/VilTor/Maildir
+drwx------ 5 andfri andfri 4096 May 20 19:28 /home/andfri/Maildir
+drwx------ 5 SinGud SinGud 4096 May 20 19:29 /home/SinGud/Maildir
+drwx------ 5 FreHar FreHar 4096 May 20 19:29 /home/FreHar/Maildir
+drwx------ 5 AriTei AriTei 4096 May 20 19:29 /home/AriTei/Maildir
+drwx------ 5 hnodri hnodri 4096 May 20 19:29 /home/hnodri/Maildir
+drwx------ 5 ValSte ValSte 4096 May 20 19:29 /home/ValSte/Maildir

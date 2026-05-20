@@ -1,3 +1,13 @@
+# ================================
+# Dovecot and Postfix Service Status - DDP server1
+# ================================
+# Path: /Evidence/service_status/dovecot_status_&_postfix_status.txt
+# Purpose:
+# - Verify Postfix mail transport agent is active
+# - Verify Dovecot IMAP server is active
+# - Confirm mail services are running on server1
+# ================================
+
 ● postfix.service - Postfix Mail Transport Agent
      Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; preset: enabled)
      Active: active (exited) since Wed 2026-05-20 10:48:52 GMT; 6h ago

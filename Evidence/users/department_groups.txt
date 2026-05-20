@@ -1,3 +1,12 @@
+# ================================
+# Department Groups - DDP server1
+# ================================
+# Path: /Evidence/users/department_groups.txt
+# Purpose:
+# - Show all DDP department groups and their members
+# - Verify users were assigned to correct groups
+# ================================
+
 Tolvudeild:x:1005:AndFri,SteGis,SinGud
 Rekstrardeild:x:1007:JonJon,EliGud,GudMag,JohTor,ValSte
 Framkvaemdadeild:x:1013:JonHar,EirEin,KolBjo,GerHaf,AriTei,BenSig,OlaHan,HelHel

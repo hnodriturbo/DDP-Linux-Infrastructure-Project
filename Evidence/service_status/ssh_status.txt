@@ -1,0 +1,32 @@
+# ================================
+# SSH Service Status - DDP server1
+# ================================
+# Path: /Evidence/service_status/ssh_status.txt
+# Purpose:
+# - Verify SSH service is active and enabled on server1
+# - Confirm sshd is listening and accepting connections
+# ================================
+
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-05-20 20:20:19 GMT; 1min 11s ago
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 34765 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 34767 (sshd)
+      Tasks: 1 (limit: 4541)
+     Memory: 1.2M (peak: 3.8M)
+        CPU: 195ms
+     CGroup: /system.slice/ssh.service
+             └─34767 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+May 20 20:20:19 server1.ddp.is systemd[1]: Starting ssh.service - OpenBSD Secure Shell server...
+May 20 20:20:19 server1.ddp.is sshd[34767]: Server listening on 0.0.0.0 port 22.
+May 20 20:20:19 server1.ddp.is sshd[34767]: Server listening on :: port 22.
+May 20 20:20:19 server1.ddp.is systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+May 20 20:20:27 server1.ddp.is sshd[34770]: Accepted publickey for hnodri from 192.168.100.100 port 39214 ssh2: RSA SHA256:ti3Wd7PS4VZHqfhttjKdlNk0iHIs/Ak/xA9MPfxSwYA
+May 20 20:20:27 server1.ddp.is sshd[34770]: pam_unix(sshd:session): session opened for user hnodri(uid=1000) by hnodri(uid=0)
+May 20 20:20:37 server1.ddp.is sshd[34842]: Accepted publickey for hnodri from 192.168.100.101 port 42716 ssh2: RSA SHA256:npkW4OrvNayUJdV7wIBSfaEhBcxktPrjIC3+mQ/mWvo
+May 20 20:20:37 server1.ddp.is sshd[34842]: pam_unix(sshd:session): session opened for user hnodri(uid=1000) by hnodri(uid=0)
+May 20 20:20:53 server1.ddp.is sshd[34916]: Connection closed by authenticating user hnodri 192.168.100.101 port 51208 [preauth]

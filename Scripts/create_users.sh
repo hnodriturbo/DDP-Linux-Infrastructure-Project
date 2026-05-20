@@ -3,6 +3,7 @@
 # ================================
 # create_users.sh - DDP User Creation Script
 # ================================
+# Path: /Scripts/create_users.sh
 # Purpose:
 #   Read Linux_Users.CSV and for each row:
 #   - Create the department group if it does not already exist

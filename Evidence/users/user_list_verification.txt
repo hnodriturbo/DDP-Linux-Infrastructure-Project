@@ -1,3 +1,13 @@
+# ================================
+# User List Verification - DDP server1
+# ================================
+# Path: /Evidence/users/user_list_verification.txt
+# Purpose:
+# - Verify all DDP project users were created successfully
+# - Show /etc/passwd entries for each user
+# - Confirm UIDs, GIDs, home directories, and shells
+# ================================
+
 AndFri:x:1001:1001:Andri Mar Fridriksson, amf@ddp.is, EmployeeID 1010:/home/AndFri:/bin/bash
 SteGis:x:1002:1002:Stefan Gislason, stg@ddp.is, EmployeeID 1011:/home/SteGis:/bin/bash
 SinGud:x:1003:1006:Sindri Gudmundsson, sig@ddp.is, EmployeeID 1012:/home/SinGud:/bin/bash
