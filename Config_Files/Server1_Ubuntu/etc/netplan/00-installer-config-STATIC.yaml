@@ -1,6 +1,7 @@
 # ================================
 # Netplan Configuration - Ubuntu Server
 # ================================
+# Path: /etc/netplan/00-installer-config-STATIC.yaml
 # Purpose:
 # - ens33 = Internal LAN (VMnet6) → static IP
 # - ens37 = NAT interface → internet (DHCP)

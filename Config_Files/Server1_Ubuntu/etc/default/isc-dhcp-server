@@ -1,6 +1,7 @@
 # ================================
 # ISC DHCP Server Interface Selection
 # ================================
+# Path: /etc/default/isc-dhcp-server
 # Purpose:
 # - Bind DHCP only to the DDP internal LAN
 # - Prevent DHCP responses on VMware NAT

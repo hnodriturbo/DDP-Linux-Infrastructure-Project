@@ -1,0 +1,28 @@
+● postfix.service - Postfix Mail Transport Agent
+     Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; preset: enabled)
+     Active: active (exited) since Wed 2026-05-20 10:48:52 GMT; 6h ago
+       Docs: man:postfix(1)
+   Main PID: 20707 (code=exited, status=0/SUCCESS)
+        CPU: 8ms
+
+May 20 10:48:52 server1.ddp.is systemd[1]: Starting postfix.service - Postfix Mail Transport Agent...
+May 20 10:48:52 server1.ddp.is systemd[1]: Finished postfix.service - Postfix Mail Transport Agent.
+● dovecot.service - Dovecot IMAP/POP3 email server
+     Loaded: loaded (/usr/lib/systemd/system/dovecot.service; enabled; preset: enabled)
+     Active: active (running) since Wed 2026-05-20 17:08:53 GMT; 3min 1s ago
+       Docs: man:dovecot(1)
+             https://doc.dovecot.org/
+   Main PID: 24550 (dovecot)
+     Status: "v2.3.21 (47349e2482) running"
+      Tasks: 4 (limit: 4541)
+     Memory: 3.4M (peak: 3.5M)
+        CPU: 87ms
+     CGroup: /system.slice/dovecot.service
+             ├─24550 /usr/sbin/dovecot -F
+             ├─24552 dovecot/anvil
+             ├─24553 dovecot/log
+             └─24554 dovecot/config
+
+May 20 17:08:53 server1.ddp.is systemd[1]: Starting dovecot.service - Dovecot IMAP/POP3 email server...
+May 20 17:08:53 server1.ddp.is dovecot[24550]: master: Dovecot v2.3.21 (47349e2482) starting up for imap, pop3 (core dumps disabled)
+May 20 17:08:53 server1.ddp.is systemd[1]: Started dovecot.service - Dovecot IMAP/POP3 email server.

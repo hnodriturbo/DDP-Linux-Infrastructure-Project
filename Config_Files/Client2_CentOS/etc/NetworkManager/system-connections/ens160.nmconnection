@@ -2,6 +2,7 @@
 # NetworkManager Connection Profile
 # CentOS Client Network Configuration
 # ================================
+# Path: /etc/NetworkManager/system-connections/ens160.nmconnection
 # Purpose:
 # - Configure static IPv4 networking
 # - Use Ubuntu server1 as gateway/router

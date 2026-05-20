@@ -1,6 +1,7 @@
 # ================================
 # Network Configuration - CentOS Client
 # ================================
+# Path: /etc/sysconfig/network-scripts/ifcfg-ens160
 # Purpose:
 # - ens160 = LAN (VMnet5) → static IP
 # - Gateway = Ubuntu server (router)

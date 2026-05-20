@@ -158,11 +158,10 @@ The infrastructure includes:
 │   │   │   └── syslog_test.png ✅
 │   │   │
 │   │   └── Server1_Ubuntu/
-│   │       ├── backup_script_execution.png
 │   │       ├── bind9_status.png  ✅
 │   │       ├── chrony_status.png ✅
 │   │       ├── chrony_clients.png ✅
-│   │       ├── cron_schedule.png
+│   │       ├── cron_schedule.png ✅
 │   │       ├── cups_status.png
 │   │       ├── cups_web_interface.png
 │   │       ├── dhcpd_config.png  ✅
@@ -170,12 +169,11 @@ The infrastructure includes:
 │   │       ├── dhcp_server_status.png  ✅
 │   │       ├── dig_forward_lookup.png  ✅
 │   │       ├── dig_reverse_lookup.png  ✅
-│   │       ├── dovecot_status.png
+│   │       ├── dovecot_status_&_postfix_status.png ✅
 │   │       ├── final_validation.png
 │   │       ├── static_hosts.png  ✅
 │   │       ├── journald_persistent.png ✅
 │   │       ├── static_netplan_00-installer-config.png  ✅
-│   │       ├── postfix_status.png
 │   │       ├── roundcube_login.png
 │   │       ├── rsyslog_server_status.png ✅
 │   │       ├── ssh_status.png
@@ -184,11 +182,10 @@ The infrastructure includes:
 │   │       ├── ufw_status.png
 │   │       └── user_list_verification.png  ✅
 │   │
-│   ├── Configuration_Guide.md 
+│   ├── Configuration_Guide.md  ✅
 │   ├── Network_Infrastructure.png  ✅
 │   ├── Network_Structure_Basic_Text_Diagram.md ✅
-│   ├── Project_Report.pdf
-│   └── Ultimate_Final_Project_Guide.md
+│   └── Project_Report.pdf  ✅ (half way through)
 │
 ├── Evidence/
 │   ├── dhcp/
@@ -208,7 +205,7 @@ The infrastructure includes:
 │   │   └── ufw_status.txt
 │   │
 │   ├── logs/
-│   │   ├── backup_log.txt
+│   │   ├── backup_log.txt  ✅
 │   │   ├── journal_persistence_check.txt
 │   │   └── syslog_test_results.txt
 │   │
@@ -224,8 +221,7 @@ The infrastructure includes:
 │   │   ├── chrony_status.txt ✅
 │   │   ├── cups_status.txt
 │   │   ├── dhcp_status.txt ✅
-│   │   ├── dovecot_status.txt
-│   │   ├── postfix_status.txt
+│   │   ├── dovecot_status_&_postfix_status.txt ✅
 │   │   ├── rsyslog_status.txt  ✅
 │   │   └── ssh_status.txt
 │   │

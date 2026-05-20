@@ -1,6 +1,7 @@
 # ================================
 # Local Host Resolution Configuration
 # ================================
+# Path: /etc/static_hosts
 # Purpose:
 # - Define local hostname mappings before DNS/BIND9 exists
 # - Allow server1, client1, and client2 communication by hostname

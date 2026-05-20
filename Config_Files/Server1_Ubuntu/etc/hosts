@@ -1,6 +1,7 @@
 # ================================
 # Local Host Resolution Configuration
 # ================================
+# Path: /etc/hosts
 # Purpose:
 # - Provide fallback local hostname mappings for DDP infrastructure
 # - Support hostname resolution before or if DNS is unavailable
